@@ -150,14 +150,14 @@ class ClockPainter extends CustomPainter {
     Canvas canvas,
   ) {
     var r = radius + ticksOffset - strokeWidth / 2;
-    var r2 = radius + ticksOffset - strokeWidth;
+    var r2 = radius + ticksOffset - strokeWidth/1.5;
     paint.color = ticksColor;
     paint.strokeWidth = ticksWidth;
     List.generate(ticks!, (i) => i + 1).forEach((i) {
       if (i == 0 || i % 6 == 0) {
         double angle = (360 / ticks!) * i * pi / 180 + offsetRad;
         canvas.drawLine(calcCoords(radius, radius, angle, r2),
-            calcCoords(radius, radius, angle, r2/2 + ticksLength*2), paint);
+            calcCoords(radius, radius, angle, r2 + ticksLength*2), paint);
       } else {
         double angle = (360 / ticks!) * i * pi / 180 + offsetRad;
         canvas.drawLine(calcCoords(radius, radius, angle, r),
