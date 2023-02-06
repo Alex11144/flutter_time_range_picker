@@ -157,7 +157,7 @@ class ClockPainter extends CustomPainter {
       if (i == 0 || i % 6 == 0) {
         double angle = (360 / ticks!) * i * pi / 180 + offsetRad;
         canvas.drawLine(calcCoords(radius, radius, angle, r2),
-            calcCoords(radius, radius, angle, r2*2 + ticksLength*2), paint);
+            calcCoords(radius, radius, angle, r2/2 + ticksLength*2), paint);
       } else {
         double angle = (360 / ticks!) * i * pi / 180 + offsetRad;
         canvas.drawLine(calcCoords(radius, radius, angle, r),
