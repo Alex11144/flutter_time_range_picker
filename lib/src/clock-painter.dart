@@ -150,7 +150,7 @@ class ClockPainter extends CustomPainter {
     Canvas canvas,
   ) {
     var r = radius + ticksOffset - strokeWidth / 2;
-    var r2 = radius + ticksOffset - strokeWidth/1.5;
+    var r2 = radius + ticksOffset - strokeWidth/4;
     paint.color = ticksColor;
     paint.strokeWidth = ticksWidth;
     List.generate(ticks!, (i) => i + 1).forEach((i) {
