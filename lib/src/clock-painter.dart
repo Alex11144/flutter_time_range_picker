@@ -154,7 +154,7 @@ class ClockPainter extends CustomPainter {
     paint.color = ticksColor;
     paint.strokeWidth = ticksWidth;
     List.generate(ticks!, (i) => i + 1).forEach((i) {
-      if (ticks[0] || ticks[i] % 6 == 0) {
+      if (i ==0 || i % 6 == 0) {
         double angle = (360 / ticks!) * i * pi / 180 + offsetRad;
         canvas.drawLine(calcCoords(radius, radius, angle, r2),
             calcCoords(radius, radius, angle, r2 + ticksLength), paint);
