@@ -63,7 +63,7 @@ showTimeRangePicker({
   Color? backgroundColor,
 
   /// a widget displayed in the background, use e.g. an image
-  Widget? backgroundWidget,
+  StatefulWidget? backgroundWidget,
 
   /// number of ticks displayed
   int ticks = 0,
